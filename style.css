@@ -1,0 +1,95 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+#game {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    background-color: blueviolet;
+    color: blueviolet;
+    font-weight: bold;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    border: 2px solid blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 34px;
+    color: blueviolet;
+    font-weight: bold;
+}
+
+#restart {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 26px;
+    cursor: pointer;
+    color: blueviolet;
+    border-radius: 15px;
+    background-color: aqua;
+    border: 0;
+    box-shadow: 2px 5px 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #game {
+        grid-template-columns: repeat(3, 80px);
+        grid-template-rows: repeat(3, 80px);
+    }
+
+    .cell {
+        width: 80px;
+        height: 80px;
+        font-size: 40px;
+    }
+
+    #message {
+        font-size: 28px;
+    }
+
+    #restart {
+        padding: 8px 16px;
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    #game {
+        grid-template-columns: repeat(3, 60px);
+        grid-template-rows: repeat(3, 60px);
+    }
+
+    .cell {
+        width: 60px;
+        height: 60px;
+        font-size: 30px;
+    }
+
+    #message {
+        font-size: 24px;
+    }
+
+    #restart {
+        padding: 6px 12px;
+        font-size: 20px;
+    }
+}
