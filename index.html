@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tik-Tak-Toe Oyunu</title>
     <link rel="stylesheet" href="./style.css">
-
 </head>
 <body>
     <div id="game">
@@ -20,8 +19,15 @@
         <div class="cell" data-index="8"></div>
     </div>
     <div id="message"></div>
+    <div id="score">
+        <p>Oyuncu X: <span id="scoreX">0</span></p>
+        <p>Oyuncu O: <span id="scoreO">0</span></p>
+    </div>
     <button id="restart">Yeniden Başlat</button>
+    <audio id="clickSound" src="./sounds/click.mp3"></audio>
+    <audio id="winSound" src="./sounds/win.mp3"></audio>
+    <audio id="drawSound" src="./sounds/draw.mp3"></audio>
+    <audio id="finalWinSound" src="./sounds/violin-win-5-185128.mp3"></audio>
     <script src="./script.js"></script>
-  
 </body>
 </html>

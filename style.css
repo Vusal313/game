@@ -5,48 +5,83 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f0f0f0;
+    background-color: #282c34;
+    color: #61dafb;
+    font-family: 'Arial', sans-serif;
 }
 
 #game {
     display: grid;
-    grid-template-columns: repeat(3, 100px);
-    grid-template-rows: repeat(3, 100px);
-    gap: 5px;
-    background-color: blueviolet;
-    color: blueviolet;
-    font-weight: bold;
+    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: repeat(3, 120px);
+    gap: 10px;
+    background-color: #61dafb;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .cell {
-    width: 100px;
-    height: 100px;
-    background-color: aqua;
-    border: 2px solid blueviolet;
+    width: 120px;
+    height: 120px;
+    background-color: #282c34;
+    border: 2px solid #61dafb;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 50px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 8px;
+}
+
+.cell:hover {
+    background-color: #8719e8;
+    color: #282c34;
+    transform: scale(1.05);
 }
 
 #message {
     margin-top: 20px;
     font-size: 34px;
-    color: blueviolet;
+    color: #8f45f7;
     font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#score {
+    margin-top: 20px;
+    font-size: 28px;
+    color: #a41de3;
+}
+
+#score p {
+    margin: 5px 0;
 }
 
 #restart {
     margin-top: 20px;
-    padding: 10px 20px;
+    padding: 15px 30px;
     font-size: 26px;
     cursor: pointer;
-    color: blueviolet;
+    color: #282c34;
     border-radius: 15px;
-    background-color: aqua;
-    border: 0;
-    box-shadow: 2px 5px 10px;
+    background-color: #c561fb;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#restart:hover {
+    background-color: #5d1781;
+    color: blueviolet;
+    transform: scale(1.05);
+}
+
+#medal {
+    display: none;
+    width: 100px;
+    margin-top: 20px;
 }
 
 /* Responsive Styles */
@@ -67,7 +102,7 @@ body {
     }
 
     #restart {
-        padding: 8px 16px;
+        padding: 10px 20px;
         font-size: 22px;
     }
 }
@@ -89,7 +124,7 @@ body {
     }
 
     #restart {
-        padding: 6px 12px;
+        padding: 8px 16px;
         font-size: 20px;
     }
 }
